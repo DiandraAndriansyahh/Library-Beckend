@@ -12,6 +12,16 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Book::create([
+            'judul' => 'Belajar Laravel API',
+            'penulis' => 'Taylor Otwell',
+            'stok' => 10,
+        ]);
+
+        Book::create([
+            'judul' => 'Mastering PHP',
+            'penulis' => 'Rasmus Lerdorf',
+            'stok' => 5,
+        ]);
     }
 }
