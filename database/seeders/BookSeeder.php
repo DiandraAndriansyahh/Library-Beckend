@@ -3,8 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Book; // 👈 INI YANG KURANG
-use Illuminate\Support\Facades\DB;
+use App\Models\Book;
 
 class BookSeeder extends Seeder
 {
@@ -14,6 +13,12 @@ class BookSeeder extends Seeder
             'judul' => 'Belajar Laravel API',
             'penulis' => 'Taylor Otwell',
             'stok' => 10,
+        ]);
+
+        Book::create([
+            'judul' => 'React Atomic Design',
+            'penulis' => 'Brad Frost',
+            'stok' => 5,
         ]);
     }
 }
