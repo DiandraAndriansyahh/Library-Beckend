@@ -43,6 +43,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/pinjam', [PeminjamanController::class, 'pinjam']);
     Route::post('/kembalikan/{id}', [PeminjamanController::class, 'kembalikan']);
     Route::get('/riwayat-selesai', [PeminjamanController::class, 'riwayatSelesai']);
+    Route::middleware('auth:sanctum')->group(function () {
+    // ... routes lain
+    
+    // TAMBAH INI:
+    Route::get('/riwayat', [PeminjamanController::class, 'riwayat']); 
+    
+    // ... routes lain
+});
 
     // Admin Access
     Route::get('/admin/peminjaman', [PeminjamanController::class, 'allTransaksi']);

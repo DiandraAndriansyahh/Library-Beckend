@@ -11,4 +11,5 @@ class Book extends Model
 
     // Tambahkan kategori dan deskripsi di sini agar bisa disimpan
    protected $fillable = ['judul', 'penulis', 'stok', 'kategori', 'deskripsi', 'cover_image'];
+   
 }
